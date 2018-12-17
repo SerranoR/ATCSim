@@ -60,7 +60,11 @@ public:
 	virtual int getMaxFlights(const Ice::Current&);
 	virtual int getPoints(const Ice::Current&);
 
-  void book_landing() {any_landing_ = true;}
+  void book_landing(const std::string& id)
+	{
+		any_landing_ = true;
+		landing_id_ = id;
+	}
   bool is_booked_landing() { return any_landing_;}
 
 private:
@@ -94,6 +98,7 @@ private:
 	float acum_;
 
   bool any_landing_;
+	std::string landing_id_;
 
 };
 

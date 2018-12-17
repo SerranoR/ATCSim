@@ -123,8 +123,6 @@ Airport::generate_storm()
 void
 Airport::generate_flight()
 {
-
-
 	std::cerr<<"Generate new flight";
 	float angle, x, y, z;
 	float bear, inc;
@@ -246,10 +244,6 @@ Airport::step()
 		generate_flight();
 		pthread_mutex_unlock (&mutex);
 	}
-
-
-
-
 }
 
 
@@ -304,6 +298,10 @@ Airport::checkCollisions()
 		{
 			if( (*i)->getPosition().distance((*j)->getPosition()) < COLLISION_DISTANCE)
 			{
+				if(landing_id_ == (*i)->getId() || landing_id_ == (*j)->getId()){
+					any_landing_ = false;
+				}
+
 				std::cerr<<"Collision between "<<(*i)->getId()<<" and "<<(*j)->getId()<<std::endl;
 				i = removeFlight((*i)->getId());
 				j = removeFlight((*j)->getId());
@@ -342,10 +340,7 @@ Airport::checkFlightsInStorm()
 		in = dist < storm->getRadious() && fabs(zs-zf)<storm->getHeight();
 		(*it)->setInStorm(in);
 
-
 		//std::cerr<<"["<<(*it)->getId()<<" = "<<dist<<" < "<<storm->getRadious()<<std::endl;
-
-
 	}
 }
 
@@ -362,16 +357,25 @@ Airport::checkCrashes()
 		if((*it)->getPosition().get_z()<CRASH_Z)
 		{
 			std::cerr<<"[PoZ]Crash of "<<(*it)->getId()<<std::endl;
+			if(landing_id_ == (*it)->getId()){
+				any_landing_ = false;
+			}
 			it=removeFlight((*it)->getId());
 			points += CRASH_HEIGHT_POINTS;
 		}else if(toDegrees(fabs((*it)->getInclination())) > CRASH_INC)
 		{
 			std::cerr<<"[Inc] Crash of "<<(*it)->getId()<<std::endl;
+			if(landing_id_ == (*it)->getId()){
+				any_landing_ = false;
+			}
 			it = removeFlight((*it)->getId());
 			points += CRASH_INC_POINTS;
 		}else if( (*it)->getSpeed()<CRASH_SPEED)
 		{
 			std::cerr<<"[Spd] Crash of "<<(*it)->getId()<<std::endl;
+			if(landing_id_ == (*it)->getId()){
+				any_landing_ = false;
+			}
 			it = removeFlight((*it)->getId());
 			points += CRASH_SPEED_POINTS;
 		}else
@@ -405,7 +409,6 @@ Airport::checkLandings()
 			std::cerr<<"*";
 
       any_landing_ = false;
-
 
 			return;
 		}else

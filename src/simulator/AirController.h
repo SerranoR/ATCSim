@@ -35,6 +35,7 @@ public:
 	virtual ~AirController();
 
 	void doWork();
+	//Route SetRoute(const Position& pos, const float& v);
 };
 
 };  // namespace atcsim

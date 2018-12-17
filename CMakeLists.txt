@@ -10,10 +10,6 @@ if(NOT CMAKE_CXX_STANDARD)
   set(CMAKE_CXX_STANDARD 11)
 endif()
 
-if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
-  add_compile_options(-Wall -Wextra -Wpedantic)
-endif()
-
 find_package(OpenGL REQUIRED)
 
 set(Ice_LIBRARY "/usr/lib/x86_64-linux-gnu/libIce.so")
@@ -29,12 +25,6 @@ include_directories(${GLUT_INCLUDE_DIR}
   src/simulator
 )
 find_package(Threads REQUIRED)
-
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g -Wno-deprecated-declarations")
-
-if ( CMAKE_COMPILER_IS_GNUCC )
-    set(CMAKE_CXX_FLAGS  "${CMAKE_CXX_FLAGS} -Wall -Wpedantic -Wextra ")
-endif()
 
 
 ## Building ATCSIM #################################################
