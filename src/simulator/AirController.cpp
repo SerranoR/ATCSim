@@ -113,6 +113,11 @@ AirController::doWork()
 		Position pos_aterrizaje_2(200.0, 0.0, 25.0);
 		Position pos_aterrizaje_3(-750.0, 0.0, 25.0);
 
+		Position pos0(3500.0, 0.0, 100.0);
+		Position pos1(1500.0, 0.0, MAINTAIN_ALT);
+		Position pos2(200.0, 0.0, 25.0);
+		Position pos3(-750.0, 0.0, 25.0);
+
 		Route ra0, ra1, ra2, ra3;
 		Route r1c1, r1c2, r1c3, r1c4, r1c5, r1c6, r1c7, r1c8, r1c9, r1c10, r1c11, r1c12;
 		Route r2c1, r2c2, r2c3, r2c4, r2c5, r2c6, r2c7, r2c8, r2c9, r2c10, r2c11, r2c12;
