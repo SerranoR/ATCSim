@@ -126,7 +126,7 @@ AirController::doWork()
 
 	//	ra0.SetRoute(pos_aterrizaje_0, 500.0);
 		ra0.pos = pos_aterrizaje_0;
-		sra0.speed = 500.0;
+		ra0.speed = 500.0;
 		ra1.pos = pos_aterrizaje_1;
 		ra1.speed = 100.0;
 		ra2.pos = pos_aterrizaje_2;
@@ -259,6 +259,13 @@ AirController::doWork()
 						(*it)->getRoute()->push_back(r1c10);
 						(*it)->getRoute()->push_back(r1c11);
 						(*it)->getRoute()->push_back(r1c12);
+						(*it)->getRoute()->push_back(r1c11);
+						(*it)->getRoute()->push_back(r1c10);
+						(*it)->getRoute()->push_back(r1c9);
+						(*it)->getRoute()->push_back(r1c8);
+						(*it)->getRoute()->push_back(r1c7);
+						(*it)->getRoute()->push_back(r1c6);
+
 					}else if((*it)->getPosition().get_y() < 0 && (*it)->getPosition().get_x() > 8000){
 						(*it)->getRoute()->push_front(r2c1);
 						(*it)->getRoute()->push_back(r2c2);
@@ -272,6 +279,13 @@ AirController::doWork()
 						(*it)->getRoute()->push_back(r2c10);
 						(*it)->getRoute()->push_back(r2c11);
 						(*it)->getRoute()->push_back(r2c12);
+						(*it)->getRoute()->push_back(r2c11);
+						(*it)->getRoute()->push_back(r2c10);
+						(*it)->getRoute()->push_back(r2c9);
+						(*it)->getRoute()->push_back(r2c8);
+						(*it)->getRoute()->push_back(r2c7);
+						(*it)->getRoute()->push_back(r2c6);
+
 					}else if((*it)->getPosition().get_y() > 0 && (*it)->getPosition().get_x() < 8000){
 						(*it)->getRoute()->push_front(r3c1);
 						(*it)->getRoute()->push_back(r3c2);
@@ -285,6 +299,13 @@ AirController::doWork()
 						(*it)->getRoute()->push_back(r3c10);
 						(*it)->getRoute()->push_back(r3c11);
 						(*it)->getRoute()->push_back(r3c12);
+						(*it)->getRoute()->push_back(r3c11);
+						(*it)->getRoute()->push_back(r3c10);
+						(*it)->getRoute()->push_back(r3c9);
+						(*it)->getRoute()->push_back(r3c8);
+						(*it)->getRoute()->push_back(r3c7);
+						(*it)->getRoute()->push_back(r3c6);
+
 					}else if((*it)->getPosition().get_y() < 0 && (*it)->getPosition().get_x() < 8000){
 						(*it)->getRoute()->push_front(r4c1);
 						(*it)->getRoute()->push_back(r4c2);
@@ -298,6 +319,12 @@ AirController::doWork()
 						(*it)->getRoute()->push_back(r4c10);
 						(*it)->getRoute()->push_back(r4c11);
 						(*it)->getRoute()->push_back(r4c12);
+						(*it)->getRoute()->push_back(r4c11);
+						(*it)->getRoute()->push_back(r4c10);
+						(*it)->getRoute()->push_back(r4c9);
+						(*it)->getRoute()->push_back(r4c8);
+						(*it)->getRoute()->push_back(r4c7);
+						(*it)->getRoute()->push_back(r4c6);
 					}
 
 				}else{
