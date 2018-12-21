@@ -39,15 +39,15 @@ AirController::AirController() {
 AirController::~AirController() {
 	// TODO Auto-generated destructor stub
 }
-/*
+
 Route
 AirController::SetRoute(const Position& pos, const float& v)
 {
-	atcsim::Route r
+	atcsim::Route r;
 	r.pos = pos;
 	r.speed = v;
 	return r;
-}*/
+}
 
 void
 AirController::doWork()
@@ -139,9 +139,9 @@ AirController::doWork()
 		Route r3c1, r3c2, r3c3, r3c4, r3c5, r3c6, r3c7, r3c8, r3c9, r3c10, r3c11, r3c12;
 		Route r4c1, r4c2, r4c3, r4c4, r4c5, r4c6, r4c7, r4c8, r4c9, r4c10, r4c11, r4c12;
 
-		//ra0 = SetRoute(pos_aterrizaje_0, 500.0);
-		ra0.pos = pos0;
-		ra0.speed = 500.0;
+		ra0 = SetRoute(pos0, 500.0);
+		//ra0.pos = pos0;
+		//ra0.speed = 500.0;
 		ra1.pos = pos1;
 		ra1.speed = 100.0;
 		ra2.pos = pos2;

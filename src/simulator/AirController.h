@@ -26,6 +26,7 @@
 #define AIRCONTROLLER_H_
 
 #include "Singleton.h"
+#include "Flight.h"
 
 namespace atcsim{
 
@@ -35,7 +36,7 @@ public:
 	virtual ~AirController();
 
 	void doWork();
-	//Route SetRoute(const Position& pos, const float& v);
+	Route SetRoute(const Position& pos, const float& v);
 };
 
 };  // namespace atcsim
