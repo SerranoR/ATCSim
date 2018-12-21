@@ -75,179 +75,128 @@ AirController::doWork()
 		z3_lo = 500.0;
 
 
-		//Circuito 1
-		Position pos_circuito1_1(x1, y1, z1_hi);
-		Position pos_circuito1_2(x1, y2, z1);
-		Position pos_circuito1_3(x2, y2, z1);
-		Position pos_circuito1_4(x2, y1, z1_lo);
-		Position pos_circuito1_5(x1, y1, z2_hi);
-		Position pos_circuito1_6(x1, y2, z2);
-		Position pos_circuito1_7(x2, y2, z2);
-		Position pos_circuito1_8(x2, y1, z2_lo);
-		Position pos_circuito1_9(x1, y1, z3_hi);
-		Position pos_circuito1_10(x1, y2, z3);
-		Position pos_circuito1_11(x2, y2, z3_lo);
-		Position pos_circuito1_12(x2, y1, z3_lo);
-		//Circuito 2
-		Position pos_circuito2_1(x1, -y1, z1_hi);
-		Position pos_circuito2_2(x1, -y2, z1);
-		Position pos_circuito2_3(x2, -y2, z1);
-		Position pos_circuito2_4(x2, -y1, z1_lo);
-		Position pos_circuito2_5(x1, -y1, z2_hi);
-		Position pos_circuito2_6(x1, -y2, z2);
-		Position pos_circuito2_7(x2, -y2, z2);
-		Position pos_circuito2_8(x2, -y1, z2_lo);
-		Position pos_circuito2_9(x1, -y1, z3_hi);
-		Position pos_circuito2_10(x1, -y2, z3);
-		Position pos_circuito2_11(x2, -y2, z3_lo);
-		Position pos_circuito2_12(x2, -y1, z3_lo);
-		//Circuito 3
-		Position pos_circuito3_1(x3, y1, z1_hi);
-		Position pos_circuito3_2(x3, y2, z1);
-		Position pos_circuito3_3(x4, y2, z1);
-		Position pos_circuito3_4(x4, y1, z1_lo);
-		Position pos_circuito3_5(x3, y1, z2_hi);
-		Position pos_circuito3_6(x3, y2, z2);
-		Position pos_circuito3_7(x4, y2, z2);
-		Position pos_circuito3_8(x4, y1, z2_lo);
-		Position pos_circuito3_9(x3, y1, z3_hi);
-		Position pos_circuito3_10(x3, y2, z3);
-		Position pos_circuito3_11(x4, y2, z3_lo);
-		Position pos_circuito3_12(x4, y1, z3_lo);
-		//Circuito 4
-		Position pos_circuito4_1(x3, -y1, z1_hi);
-		Position pos_circuito4_2(x3, -y2, z1);
-		Position pos_circuito4_3(x4, -y2, z1);
-		Position pos_circuito4_4(x4, -y1, z1_lo);
-		Position pos_circuito4_5(x3, -y1, z2_hi);
-		Position pos_circuito4_6(x3, -y2, z2);
-		Position pos_circuito4_7(x4, -y2, z2);
-		Position pos_circuito4_8(x4, -y1, z2_lo);
-		Position pos_circuito4_9(x3, -y1, z3_hi);
-		Position pos_circuito4_10(x3, -y2, z3);
-		Position pos_circuito4_11(x4, -y2, z3_lo);
-		Position pos_circuito4_12(x4, -y1, z3_lo);
+		//loop 1
+		Position pos_loop1_1(x1, y1, z1_hi);
+		Position pos_loop1_2(x1, y2, z1);
+		Position pos_loop1_3(x2, y2, z1);
+		Position pos_loop1_4(x2, y1, z1_lo);
+		Position pos_loop1_5(x1, y1, z2_hi);
+		Position pos_loop1_6(x1, y2, z2);
+		Position pos_loop1_7(x2, y2, z2);
+		Position pos_loop1_8(x2, y1, z2_lo);
+		Position pos_loop1_9(x1, y1, z3_hi);
+		Position pos_loop1_10(x1, y2, z3);
+		Position pos_loop1_11(x2, y2, z3_lo);
+		Position pos_loop1_12(x2, y1, z3_lo);
+		//loop 2
+		Position pos_loop2_1(x1, -y1, z1_hi);
+		Position pos_loop2_2(x1, -y2, z1);
+		Position pos_loop2_3(x2, -y2, z1);
+		Position pos_loop2_4(x2, -y1, z1_lo);
+		Position pos_loop2_5(x1, -y1, z2_hi);
+		Position pos_loop2_6(x1, -y2, z2);
+		Position pos_loop2_7(x2, -y2, z2);
+		Position pos_loop2_8(x2, -y1, z2_lo);
+		Position pos_loop2_9(x1, -y1, z3_hi);
+		Position pos_loop2_10(x1, -y2, z3);
+		Position pos_loop2_11(x2, -y2, z3_lo);
+		Position pos_loop2_12(x2, -y1, z3_lo);
+		//loop 3
+		Position pos_loop3_1(x3, y1, z1_hi);
+		Position pos_loop3_2(x3, y2, z1);
+		Position pos_loop3_3(x4, y2, z1);
+		Position pos_loop3_4(x4, y1, z1_lo);
+		Position pos_loop3_5(x3, y1, z2_hi);
+		Position pos_loop3_6(x3, y2, z2);
+		Position pos_loop3_7(x4, y2, z2);
+		Position pos_loop3_8(x4, y1, z2_lo);
+		Position pos_loop3_9(x3, y1, z3_hi);
+		Position pos_loop3_10(x3, y2, z3);
+		Position pos_loop3_11(x4, y2, z3_lo);
+		Position pos_loop3_12(x4, y1, z3_lo);
+		//loop 4
+		Position pos_loop4_1(x3, -y1, z1_hi);
+		Position pos_loop4_2(x3, -y2, z1);
+		Position pos_loop4_3(x4, -y2, z1);
+		Position pos_loop4_4(x4, -y1, z1_lo);
+		Position pos_loop4_5(x3, -y1, z2_hi);
+		Position pos_loop4_6(x3, -y2, z2);
+		Position pos_loop4_7(x4, -y2, z2);
+		Position pos_loop4_8(x4, -y1, z2_lo);
+		Position pos_loop4_9(x3, -y1, z3_hi);
+		Position pos_loop4_10(x3, -y2, z3);
+		Position pos_loop4_11(x4, -y2, z3_lo);
+		Position pos_loop4_12(x4, -y1, z3_lo);
 
 		Position pos0(3500.0, 0.0, 100.0);
 		Position pos1(1500.0, 0.0, MAINTAIN_ALT);
 		Position pos2(200.0, 0.0, 25.0);
 		Position pos3(-750.0, 0.0, 25.0);
 
-		Route ra0, ra1, ra2, ra3;
-		Route r1c1, r1c2, r1c3, r1c4, r1c5, r1c6, r1c7, r1c8, r1c9, r1c10, r1c11, r1c12;
-		Route r2c1, r2c2, r2c3, r2c4, r2c5, r2c6, r2c7, r2c8, r2c9, r2c10, r2c11, r2c12;
-		Route r3c1, r3c2, r3c3, r3c4, r3c5, r3c6, r3c7, r3c8, r3c9, r3c10, r3c11, r3c12;
-		Route r4c1, r4c2, r4c3, r4c4, r4c5, r4c6, r4c7, r4c8, r4c9, r4c10, r4c11, r4c12;
+		Route rl0, rl1, rl2, rl3;
+		Route rne1, rne2, rne3, rne4, rne5, rne6, rne7, rne8, rne9, rne10, rne11, rne12;
+		Route rnw1, rnw2, rnw3, rnw4, rnw5, rnw6, rnw7, rnw8, rnw9, rnw10, rnw11, rnw12;
+		Route rse1, rse2, rse3, rse4, rse5, rse6, rse7, rse8, rse9, rse10, rse11, rse12;
+		Route rsw1, rsw2, rsw3, rsw4, rsw5, rsw6, rsw7, rsw8, rsw9, rsw10, rsw11, rsw12;
 
-		ra0 = SetRoute(pos0, 500.0);
-		//ra0.pos = pos0;
-		//ra0.speed = 500.0;
-		ra1.pos = pos1;
-		ra1.speed = 100.0;
-		ra2.pos = pos2;
-		ra2.speed = 19.0;
-		ra3.pos = pos3;
-		ra3.speed = 15.0;
+		//Landing
+		rl0 = SetRoute(pos0, 500.0);
+		rl1 = SetRoute(pos1, 100.0);
+		rl2 = SetRoute(pos2, 19.0);
+		rl3 = SetRoute(pos3, 15.0);
+		//NorthEast circuit
+		rne1 = SetRoute(pos_loop1_1, 800.0);
+		rne2 = SetRoute(pos_loop1_2, 800.0);
+		rne3 = SetRoute(pos_loop1_3, 800.0);
+		rne4 = SetRoute(pos_loop1_4, 800.0);
+		rne5 = SetRoute(pos_loop1_5, 800.0);
+		rne6 = SetRoute(pos_loop1_6, 800.0);
+		rne7 = SetRoute(pos_loop1_7, 600.0);
+		rne8 = SetRoute(pos_loop1_8, 600.0);
+		rne9 = SetRoute(pos_loop1_9, 600.0);
+		rne10 = SetRoute(pos_loop1_10, 600.0);
+		rne11 = SetRoute(pos_loop1_11, 600.0);
+		rne12 = SetRoute(pos_loop1_11, 600.0);
+		//NorthWest circuit
+		rnw1 = SetRoute(pos_loop2_1, 800.0);
+		rnw2 = SetRoute(pos_loop2_2, 800.0);
+		rnw3 = SetRoute(pos_loop2_3, 800.0);
+		rnw4 = SetRoute(pos_loop2_4, 800.0);
+		rnw5 = SetRoute(pos_loop2_5, 800.0);
+		rnw6 = SetRoute(pos_loop2_6, 800.0);
+		rnw7 = SetRoute(pos_loop2_7, 600.0);
+		rnw8 = SetRoute(pos_loop2_8, 600.0);
+		rnw9 = SetRoute(pos_loop2_9, 600.0);
+		rnw10 = SetRoute(pos_loop2_10, 600.0);
+		rnw11 = SetRoute(pos_loop2_11, 600.0);
+		rnw12 = SetRoute(pos_loop2_11, 600.0);
+		//SouthEast circuit
+		rse1 = SetRoute(pos_loop3_1, 800.0);
+		rse2 = SetRoute(pos_loop3_2, 800.0);
+		rse3 = SetRoute(pos_loop3_3, 800.0);
+		rse4 = SetRoute(pos_loop3_4, 800.0);
+		rse5 = SetRoute(pos_loop3_5, 800.0);
+		rse6 = SetRoute(pos_loop3_6, 800.0);
+		rse7 = SetRoute(pos_loop3_7, 600.0);
+		rse8 = SetRoute(pos_loop3_8, 600.0);
+		rse9 = SetRoute(pos_loop3_9, 600.0);
+		rse10 = SetRoute(pos_loop3_10, 600.0);
+		rse11 = SetRoute(pos_loop3_11, 600.0);
+		rse12 = SetRoute(pos_loop3_11, 600.0);
+		//SouthWest circuit
+		rsw1 = SetRoute(pos_loop4_1, 800.0);
+		rsw2 = SetRoute(pos_loop4_2, 800.0);
+		rsw3 = SetRoute(pos_loop4_3, 800.0);
+		rsw4 = SetRoute(pos_loop4_4, 800.0);
+		rsw5 = SetRoute(pos_loop4_5, 800.0);
+		rsw6 = SetRoute(pos_loop4_6, 800.0);
+		rsw7 = SetRoute(pos_loop4_7, 600.0);
+		rsw8 = SetRoute(pos_loop4_8, 600.0);
+		rsw9 = SetRoute(pos_loop4_9, 600.0);
+		rsw10 = SetRoute(pos_loop4_10, 600.0);
+		rsw11 = SetRoute(pos_loop4_11, 600.0);
+		rsw12 = SetRoute(pos_loop4_11, 600.0);
 
-		r1c1.pos = pos_circuito1_1;
-		r1c1.speed = 800.0;
-		r1c2.pos = pos_circuito1_2;
-		r1c2.speed = 800.0;
-		r1c3.pos = pos_circuito1_3;
-		r1c3.speed = 800.0;
-		r1c4.pos = pos_circuito1_4;
-		r1c4.speed = 800.0;
-		r1c5.pos = pos_circuito1_5;
-		r1c5.speed = 800.0;
-		r1c6.pos = pos_circuito1_6;
-		r1c6.speed = 600.0;
-		r1c7.pos = pos_circuito1_7;
-		r1c7.speed = 600.0;
-		r1c8.pos = pos_circuito1_8;
-		r1c8.speed = 600.0;
-		r1c9.pos = pos_circuito1_9;
-		r1c9.speed = 600.0;
-		r1c10.pos = pos_circuito1_10;
-		r1c10.speed = 600.0;
-		r1c11.pos = pos_circuito1_11;
-		r1c11.speed = 600.0;
-		r1c12.pos = pos_circuito1_12;
-		r1c12.speed = 600.0;
-
-		r2c1.pos = pos_circuito2_1;
-		r2c1.speed = 800.0;
-		r2c2.pos = pos_circuito2_2;
-		r2c2.speed = 800.0;
-		r2c3.pos = pos_circuito2_3;
-		r2c3.speed = 800.0;
-		r2c4.pos = pos_circuito2_4;
-		r2c4.speed = 800.0;
-		r2c5.pos = pos_circuito2_5;
-		r2c5.speed = 800.0;
-		r2c6.pos = pos_circuito2_6;
-		r2c6.speed = 600.0;
-		r2c7.pos = pos_circuito2_7;
-		r2c7.speed = 600.0;
-		r2c8.pos = pos_circuito2_8;
-		r2c8.speed = 600.0;
-		r2c9.pos = pos_circuito2_9;
-		r2c9.speed = 600.0;
-		r2c10.pos = pos_circuito2_10;
-		r2c10.speed = 600.0;
-		r2c11.pos = pos_circuito2_11;
-		r2c11.speed = 600.0;
-		r2c12.pos = pos_circuito2_12;
-		r2c12.speed = 600.0;
-
-		r3c1.pos = pos_circuito3_1;
-		r3c1.speed = 800.0;
-		r3c2.pos = pos_circuito3_2;
-		r3c2.speed = 800.0;
-		r3c3.pos = pos_circuito3_3;
-		r3c3.speed = 800.0;
-		r3c4.pos = pos_circuito3_4;
-		r3c4.speed = 800.0;
-		r3c5.pos = pos_circuito3_5;
-		r3c5.speed = 800.0;
-		r3c6.pos = pos_circuito3_6;
-		r3c6.speed = 600.0;
-		r3c7.pos = pos_circuito3_7;
-		r3c7.speed = 600.0;
-		r3c8.pos = pos_circuito3_8;
-		r3c8.speed = 600.0;
-		r3c9.pos = pos_circuito3_9;
-		r3c9.speed = 600.0;
-		r3c10.pos = pos_circuito3_10;
-		r3c10.speed = 600.0;
-		r3c11.pos = pos_circuito3_11;
-		r3c11.speed = 600.0;
-		r3c12.pos = pos_circuito3_12;
-		r3c12.speed = 600.0;
-
-		r4c1.pos = pos_circuito4_1;
-		r4c1.speed = 800.0;
-		r4c2.pos = pos_circuito4_2;
-		r4c2.speed = 800.0;
-		r4c3.pos = pos_circuito4_3;
-		r4c3.speed = 800.0;
-		r4c4.pos = pos_circuito4_4;
-		r4c4.speed = 800.0;
-		r4c5.pos = pos_circuito4_5;
-		r4c5.speed = 800.0;
-		r4c6.pos = pos_circuito4_6;
-		r4c6.speed = 800.0;
-		r4c7.pos = pos_circuito4_7;
-		r4c7.speed = 600.0;
-		r4c8.pos = pos_circuito4_8;
-		r4c8.speed = 600.0;
-		r4c9.pos = pos_circuito4_9;
-		r4c9.speed = 600.0;
-		r4c10.pos = pos_circuito4_10;
-		r4c10.speed = 600.0;
-		r4c11.pos = pos_circuito4_11;
-		r4c11.speed = 600.0;
-		r4c12.pos = pos_circuito4_12;
-		r4c12.speed = 600.0;
 
 		if(!Airport::getInstance()->is_booked_landing())
 		{
@@ -263,102 +212,102 @@ AirController::doWork()
 				{
 					if((*it)->getPosition().get_y() > 0 && (*it)->getPosition().get_x() > 8000){
 						if((*it)->getPosition().get_y() < 10000)
-								(*it)->getRoute()->push_back(r1c2);
+								(*it)->getRoute()->push_back(rne2);
 						else if((*it)->getPosition().get_x() < 13000){
-								(*it)->getRoute()->push_back(r1c4);
-								(*it)->getRoute()->push_back(r1c1);
-								(*it)->getRoute()->push_back(r1c2);
+								(*it)->getRoute()->push_back(rne4);
+								(*it)->getRoute()->push_back(rne1);
+								(*it)->getRoute()->push_back(rne2);
 						}else{
-							(*it)->getRoute()->push_back(r1c1);
-							(*it)->getRoute()->push_back(r1c2);
+							(*it)->getRoute()->push_back(rne1);
+							(*it)->getRoute()->push_back(rne2);
 						}
-						(*it)->getRoute()->push_back(r1c3);
-						(*it)->getRoute()->push_back(r1c4);
-						(*it)->getRoute()->push_back(r1c5);
-						(*it)->getRoute()->push_back(r1c6);
-						(*it)->getRoute()->push_back(r1c7);
-						(*it)->getRoute()->push_back(r1c8);
-						(*it)->getRoute()->push_back(r1c9);
-						(*it)->getRoute()->push_back(r1c10);
-						(*it)->getRoute()->push_back(r1c11);
-						(*it)->getRoute()->push_back(r1c12);
-						(*it)->getRoute()->push_back(r1c5);
-						(*it)->getRoute()->push_back(r1c6);
-						(*it)->getRoute()->push_back(r1c7);
-						(*it)->getRoute()->push_back(r1c8);
+						(*it)->getRoute()->push_back(rne3);
+						(*it)->getRoute()->push_back(rne4);
+						(*it)->getRoute()->push_back(rne5);
+						(*it)->getRoute()->push_back(rne6);
+						(*it)->getRoute()->push_back(rne7);
+						(*it)->getRoute()->push_back(rne8);
+						(*it)->getRoute()->push_back(rne9);
+						(*it)->getRoute()->push_back(rne10);
+						(*it)->getRoute()->push_back(rne11);
+						(*it)->getRoute()->push_back(rne12);
+						(*it)->getRoute()->push_back(rne5);
+						(*it)->getRoute()->push_back(rne6);
+						(*it)->getRoute()->push_back(rne7);
+						(*it)->getRoute()->push_back(rne8);
 
 					}else if((*it)->getPosition().get_y() < 0 && (*it)->getPosition().get_x() > 8000){
 						if((*it)->getPosition().get_y() > -10000)
-								(*it)->getRoute()->push_back(r2c2);
+								(*it)->getRoute()->push_back(rnw2);
 						else if((*it)->getPosition().get_x() < 13000){
-								(*it)->getRoute()->push_back(r2c4);
-								(*it)->getRoute()->push_back(r2c1);
-								(*it)->getRoute()->push_back(r2c2);
+								(*it)->getRoute()->push_back(rnw4);
+								(*it)->getRoute()->push_back(rnw1);
+								(*it)->getRoute()->push_back(rnw2);
 						}else{
-							(*it)->getRoute()->push_back(r2c1);
-							(*it)->getRoute()->push_back(r2c2);
+							(*it)->getRoute()->push_back(rnw1);
+							(*it)->getRoute()->push_back(rnw2);
 						}
-						(*it)->getRoute()->push_back(r2c3);
-						(*it)->getRoute()->push_back(r2c4);
-						(*it)->getRoute()->push_back(r2c5);
-						(*it)->getRoute()->push_back(r2c6);
-						(*it)->getRoute()->push_back(r2c7);
-						(*it)->getRoute()->push_back(r2c8);
-						(*it)->getRoute()->push_back(r2c9);
-						(*it)->getRoute()->push_back(r2c10);
-						(*it)->getRoute()->push_back(r2c11);
-						(*it)->getRoute()->push_back(r2c12);
-						(*it)->getRoute()->push_back(r2c5);
-						(*it)->getRoute()->push_back(r2c6);
-						(*it)->getRoute()->push_back(r2c7);
-						(*it)->getRoute()->push_back(r2c8);
+						(*it)->getRoute()->push_back(rnw3);
+						(*it)->getRoute()->push_back(rnw4);
+						(*it)->getRoute()->push_back(rnw5);
+						(*it)->getRoute()->push_back(rnw6);
+						(*it)->getRoute()->push_back(rnw7);
+						(*it)->getRoute()->push_back(rnw8);
+						(*it)->getRoute()->push_back(rnw9);
+						(*it)->getRoute()->push_back(rnw10);
+						(*it)->getRoute()->push_back(rnw11);
+						(*it)->getRoute()->push_back(rnw12);
+						(*it)->getRoute()->push_back(rnw5);
+						(*it)->getRoute()->push_back(rnw6);
+						(*it)->getRoute()->push_back(rnw7);
+						(*it)->getRoute()->push_back(rnw8);
 
 					}else if((*it)->getPosition().get_y() > 0 && (*it)->getPosition().get_x() < 8000){
 						if((*it)->getPosition().get_x() < 2000)
-								(*it)->getRoute()->push_back(r3c4);
-						(*it)->getRoute()->push_back(r3c1);
-						(*it)->getRoute()->push_back(r3c2);
-						(*it)->getRoute()->push_back(r3c3);
-						(*it)->getRoute()->push_back(r3c4);
-						(*it)->getRoute()->push_back(r3c5);
-						(*it)->getRoute()->push_back(r3c6);
-						(*it)->getRoute()->push_back(r3c7);
-						(*it)->getRoute()->push_back(r3c8);
-						(*it)->getRoute()->push_back(r3c9);
-						(*it)->getRoute()->push_back(r3c10);
-						(*it)->getRoute()->push_back(r3c11);
-						(*it)->getRoute()->push_back(r3c12);
-						(*it)->getRoute()->push_back(r3c5);
-						(*it)->getRoute()->push_back(r3c6);
-						(*it)->getRoute()->push_back(r3c7);
-						(*it)->getRoute()->push_back(r3c8);
+								(*it)->getRoute()->push_back(rse4);
+						(*it)->getRoute()->push_back(rse1);
+						(*it)->getRoute()->push_back(rse2);
+						(*it)->getRoute()->push_back(rse3);
+						(*it)->getRoute()->push_back(rse4);
+						(*it)->getRoute()->push_back(rse5);
+						(*it)->getRoute()->push_back(rse6);
+						(*it)->getRoute()->push_back(rse7);
+						(*it)->getRoute()->push_back(rse8);
+						(*it)->getRoute()->push_back(rse9);
+						(*it)->getRoute()->push_back(rse10);
+						(*it)->getRoute()->push_back(rse11);
+						(*it)->getRoute()->push_back(rse12);
+						(*it)->getRoute()->push_back(rse5);
+						(*it)->getRoute()->push_back(rse6);
+						(*it)->getRoute()->push_back(rse7);
+						(*it)->getRoute()->push_back(rse8);
 
 					}else if((*it)->getPosition().get_y() < 0 && (*it)->getPosition().get_x() < 8000){
 						if((*it)->getPosition().get_x() < 2000)
-								(*it)->getRoute()->push_back(r4c4);
-						(*it)->getRoute()->push_back(r4c1);
-						(*it)->getRoute()->push_back(r4c2);
-						(*it)->getRoute()->push_back(r4c3);
-						(*it)->getRoute()->push_back(r4c4);
-						(*it)->getRoute()->push_back(r4c5);
-						(*it)->getRoute()->push_back(r4c6);
-						(*it)->getRoute()->push_back(r4c7);
-						(*it)->getRoute()->push_back(r4c8);
-						(*it)->getRoute()->push_back(r4c9);
-						(*it)->getRoute()->push_back(r4c10);
-						(*it)->getRoute()->push_back(r4c11);
-						(*it)->getRoute()->push_back(r4c12);
-						(*it)->getRoute()->push_back(r4c5);
-						(*it)->getRoute()->push_back(r4c6);
-						(*it)->getRoute()->push_back(r4c7);
-						(*it)->getRoute()->push_back(r4c8);
+								(*it)->getRoute()->push_back(rsw4);
+						(*it)->getRoute()->push_back(rsw1);
+						(*it)->getRoute()->push_back(rsw2);
+						(*it)->getRoute()->push_back(rsw3);
+						(*it)->getRoute()->push_back(rsw4);
+						(*it)->getRoute()->push_back(rsw5);
+						(*it)->getRoute()->push_back(rsw6);
+						(*it)->getRoute()->push_back(rsw7);
+						(*it)->getRoute()->push_back(rsw8);
+						(*it)->getRoute()->push_back(rsw9);
+						(*it)->getRoute()->push_back(rsw10);
+						(*it)->getRoute()->push_back(rsw11);
+						(*it)->getRoute()->push_back(rsw12);
+						(*it)->getRoute()->push_back(rsw5);
+						(*it)->getRoute()->push_back(rsw6);
+						(*it)->getRoute()->push_back(rsw7);
+						(*it)->getRoute()->push_back(rsw8);
 					}
 				}else{
 					Airport::getInstance()->book_landing((*it)->getId());
-					(*it)->getRoute()->push_back(ra0);
-					(*it)->getRoute()->push_back(ra1);
-					(*it)->getRoute()->push_back(ra2);
-					(*it)->getRoute()->push_back(ra3);
+					(*it)->getRoute()->push_back(rl0);
+					(*it)->getRoute()->push_back(rl1);
+					(*it)->getRoute()->push_back(rl2);
+					(*it)->getRoute()->push_back(rl3);
 					}
 				}
 			}
