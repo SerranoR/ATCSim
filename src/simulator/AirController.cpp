@@ -311,9 +311,9 @@ AirController::doWork()
 				(*it)->getRoute()->push_back(rl1);
 				(*it)->getRoute()->push_back(rl2);
 				(*it)->getRoute()->push_back(rl3);
-				}
 			}
 		}
+	}
 }
 
 }  // namespace atcsim
