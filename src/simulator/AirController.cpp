@@ -1,10 +1,12 @@
+
 /*
  * AirController.cpp
  *
  *  Created on: 21/07/2014
  *      Author: paco
  *
- *  Copyright 2014 Francisco Martín
+ *  Copyright 2014 F
+ ncisco Martín
  *
  *  This file is part of ATCSim.
  *
@@ -48,6 +50,7 @@ AirController::SetRoute(const Position& pos, const float& v)
 	r.speed = v;
 	return r;
 }
+
 
 void
 AirController::doWork()
